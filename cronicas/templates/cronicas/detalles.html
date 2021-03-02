@@ -1,0 +1,9 @@
+<h1>{{ people.apellido }}, {{ people.nombre }}</h1>
+
+<ul>
+	{% for evento in people.evento_set.all %}
+	<li>{{ evento.fecha|date:"d-m-Y" }} - {{ evento.titulo }} - {{ evento.descripcion }}</li>
+	{% endfor %}
+</ul>
+
+{{ fuentes }}

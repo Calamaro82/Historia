@@ -1,0 +1,17 @@
+<h1>Personas</h1>
+{% if all_people %}
+    <ul>
+    {% for people in all_people %}
+        <li><a href="{% url 'detallesIndividuo' people.id %}">{{ people }} </a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No people available.</p>
+{% endif %}
+
+<h1>Evento del dia</h1>
+    <ul>
+    {% for evento in eventos_diarios %}
+        <li>{{ evento.titulo }}</a></li>
+    {% endfor %}
+    </ul>
