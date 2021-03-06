@@ -24,3 +24,7 @@ def detallesIndividuo(request, individuoId):
 		                      evento__individuos__pk = individuoId)
 	return render(request, 'cronicas/detalles.html', 
 		         {'people': people, 'fuentes': fuentes })
+
+
+def todosLosEventos(request):
+	return render(request, 'cronicas/TodosLosEventos.html')
